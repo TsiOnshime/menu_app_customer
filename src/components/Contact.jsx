@@ -10,7 +10,7 @@ export default function Contact() {
           <div>
             <label className="block text-slate-700 mb-1">Name</label>
             <input
-              className="w-full border rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-purple-400"
+              className="w-full border rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-400"
               placeholder="Your full name"
             />
           </div>
@@ -18,7 +18,7 @@ export default function Contact() {
           <div>
             <label className="block text-slate-700 mb-1">Email</label>
             <input
-              className="w-full border rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-purple-400"
+              className="w-full border rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-400"
               placeholder="your.email@example.com"
             />
           </div>
@@ -26,7 +26,7 @@ export default function Contact() {
           <div className="md:col-span-2">
             <label className="block text-slate-700 mb-1">Subject</label>
             <input
-              className="w-full border rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-purple-400"
+              className="w-full border rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-400"
               placeholder="Project inquiry"
             />
           </div>
@@ -35,13 +35,13 @@ export default function Contact() {
             <label className="block text-slate-700 mb-1">Message</label>
             <textarea
               rows="5"
-              className="w-full border rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-purple-400"
+              className="w-full border rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-400"
               placeholder="Tell me about your project..."
             />
           </div>
 
           <div className="md:col-span-2 flex justify-center mt-6">
-            <button className="px-10 py-3 rounded-xl text-white font-semibold bg-gradient-to-r from-purple-500 to-pink-500 shadow-lg hover:scale-105 transition">
+            <button className="px-10 py-3 rounded-xl text-white font-semibold bg-gradient-to-r from-[#1F2A45] to-[#2F5CFF] shadow-lg hover:scale-105 transition">
               Send Message
             </button>
           </div>

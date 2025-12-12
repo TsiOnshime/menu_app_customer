@@ -1,90 +1,84 @@
-import portfolio from "../images/portfolio1.png";
-import innovate from "../images/innovate.png";
-import codeflow from "../images/codeflow.png";
-export default function FeaturedProjects() {
-  const projects = [
-    {
-      title: "Corporate Service Platform",
-      desc: "A modern, responsive corporate services web app built with React and Tailwind CSS. Clean UI, intuitive navigation, and designed for businesses to showcase services and information with high performance.",
-      img: innovate,
-      tags: ["React", "Tailwind", "Stripe"],
-      link: "https://innovatecorp2.onrender.com/",
-    },
-    {
-      title: "CodeFlow Landing Page",
-      desc: "A modern, responsive landing page built with React and Tailwind CSS. Designed for smooth navigation and visually engaging UI, highlighting features and call-to-action sections.",
-      img: codeflow,
-      tags: ["React", "Firebase", "Tailwind"],
-      link: "https://codeflow-landingpage.onrender.com",
-    },
-    {
-      title: "Personal Portfolio Website",
-      desc: "A modern, responsive personal portfolio built with React and Tailwind CSS. Features smooth animations, clean grid layouts, and a pastel UI theme to showcase projects, skills, and experience professionally.",
-      img: portfolio,
-      tags: ["React", "Tailwind", "Stripe"],
-      link: "https://userportfolio-4szw.onrender.com",
-    },
-    {
-      title: "Weather Dashboard",
-      desc: "Interactive weather app with location-based forecasts",
-      img: "/images/weather.png",
-      tags: ["React", "API", "Tailwind"],
-    },
-    {
-      title: "Blog Platform",
-      desc: "Content management system with rich text editor",
-      img: "/images/blog.png",
-      tags: ["Next.js", "Tailwind", "Prisma"],
-    },
-  ];
+import React from "react";
 
+const projects = [
+  {
+    title: "E-Commerce Platform",
+    description:
+      "Modern online shopping experience with React and Stripe integration",
+    tags: ["React", "Tailwind", "Stripe"],
+    img: "/images/ecommerce.png",
+  },
+  {
+    title: "Task Management App",
+    description: "Collaborative project management tool with real-time updates",
+    tags: ["React", "Firebase", "Tailwind"],
+    img: "/images/taskapp.png",
+  },
+  {
+    title: "Portfolio Website",
+    description: "Responsive portfolio site for creative professionals",
+    tags: ["React", "CSS3", "JavaScript"],
+    img: "/images/portfolio.png",
+  },
+  {
+    title: "Weather Dashboard",
+    description: "Interactive weather app with location-based forecasts",
+    tags: ["JavaScript", "API", "CSS3"],
+    img: "/images/weather.png",
+  },
+  {
+    title: "Blog Platform",
+    description: "Content management system with rich text editor",
+    tags: ["Django", "Python", "Bootstrap"],
+    img: "/images/blog.png",
+  },
+];
+
+export default function FeaturedProjects() {
   return (
     <section className="w-full py-16">
-      <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-center text-4xl font-bold mb-12">
-          Featured Projects
-        </h2>
+      <h2 className="text-center text-4xl font-extrabold text-gray-900 mb-14">
+        Featured Projects
+      </h2>
 
-        {/* GRID */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-          {projects.map((p, i) => (
-            <div
-              key={i}
-              className="
-                bg-white rounded-2xl overflow-hidden shadow-lg 
-                transition-all duration-300
-                hover:-translate-y-3 hover:shadow-2xl
-              "
-            >
-              <img src={p.img} alt="" className="w-full h-48 object-cover" />
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-6 max-w-7xl mx-auto">
+        {projects.map((project, index) => (
+          <div
+            key={index}
+            className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition p-0 overflow-hidden"
+          >
+            {/* Image */}
+            <div className="w-full h-52 bg-gray-100 flex items-center justify-center overflow-hidden">
+              <img
+                src={project.img}
+                alt={project.title}
+                className="w-full h-full object-cover"
+              />
+            </div>
 
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2">{p.title}</h3>
-                <p className="text-gray-600 text-sm mb-4">{p.desc}</p>
-                <a
-                  href={p.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={`Open ${p.title} in a new tab`}
-                  className="inline-block mt-2 text-sm font-medium text-white bg-purple-600 hover:bg-purple-700 focus:ring-2 focus:ring-purple-300 px-3 py-1 rounded-lg transition-colors"
-                >
-                  View site
-                </a>
+            {/* Content */}
+            <div className="p-6">
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                {project.title}
+              </h3>
+              <p className="text-gray-600 mb-4 leading-relaxed">
+                {project.description}
+              </p>
 
-                <div className="flex flex-wrap gap-2 mt-4">
-                  {p.tags.map((tag, t) => (
-                    <span
-                      key={t}
-                      className="px-3 py-1 text-xs rounded-full bg-purple-100 text-purple-700"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
+              {/* Tags */}
+              <div className="flex flex-wrap gap-2">
+                {project.tags.map((tag, i) => (
+                  <span
+                    key={i}
+                    className="px-3 py-1 text-sm bg-gray-100 text-gray-700 rounded-full"
+                  >
+                    {tag}
+                  </span>
+                ))}
               </div>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </section>
   );

@@ -1,31 +1,59 @@
-import { Linkedin, Github, Twitter, Mail } from "lucide-react";
+import { FaLinkedinIn, FaGithub, FaTwitter, FaEnvelope } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-900 py-14 text-center text-slate-300 relative">
-      <h3 className="text-2xl font-bold text-white mb-6">Tsion Shimelis</h3>
+    <footer className="bg-[#1F2937] text-center py-16">
+      {/* Name */}
+      <h2 className="text-white text-3xl font-semibold mb-8">Tsion Shimelis</h2>
 
-      <div className="flex justify-center gap-4 mb-6">
-        {[Linkedin, Github, Twitter, Mail].map((Icon, i) => (
-          <div
-            key={i}
-            className="w-12 h-12 rounded-full bg-gradient-to-br from-purple-400 to-pink-500 flex items-center justify-center text-white hover:scale-110 transition cursor-pointer"
-          >
-            <Icon size={20} />
-          </div>
-        ))}
+      {/* Social Icons */}
+      <div className="flex justify-center gap-8 mb-8">
+        <a
+          href="#"
+          className="w-14 h-14 rounded-full bg-gradient-to-b from-[#3B82F6] to-[#1D4ED8]
+                     flex items-center justify-center text-white text-2xl 
+                     hover:opacity-90 transition"
+        >
+          <FaLinkedinIn />
+        </a>
+
+        <a
+          href="#"
+          className="w-14 h-14 rounded-full bg-gradient-to-b from-[#3B82F6] to-[#1D4ED8]
+                     flex items-center justify-center text-white text-2xl 
+                     hover:opacity-90 transition"
+        >
+          <FaGithub />
+        </a>
+
+        <a
+          href="#"
+          className="w-14 h-14 rounded-full bg-gradient-to-b from-[#3B82F6] to-[#1D4ED8]
+                     flex items-center justify-center text-white text-2xl 
+                     hover:opacity-90 transition"
+        >
+          <FaTwitter />
+        </a>
+
+        <a
+          href="#"
+          className="w-14 h-14 rounded-full bg-gradient-to-b from-[#3B82F6] to-[#1D4ED8]
+                     flex items-center justify-center text-white text-2xl 
+                     hover:opacity-90 transition"
+        >
+          <FaEnvelope />
+        </a>
       </div>
 
-      <p className="text-sm">tsion.shimelis@example.com | +251 912 345 678</p>
-
-      <p className="text-xs text-slate-500 mt-2">
-        © 2024 Tsion Shimelis. All rights reserved.
+      {/* Contact */}
+      <p className="text-gray-300 text-lg">
+        tsion.shimelis@example.com | +251 912 345 678
       </p>
 
-      <div className="absolute right-6 bottom-6 bg-white text-slate-700 px-4 py-2 rounded-xl shadow font-medium text-sm">
-        Designed by{" "}
-        <span className="text-purple-500 font-semibold">Readdy</span>
-      </div>
+      {/* Copyright */}
+      <p className="text-gray-400 text-sm mt-4">
+        © 2024 Tsion Shimelis. All rights reserved.
+      </p>
     </footer>
   );
 }

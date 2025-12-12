@@ -26,7 +26,7 @@ export default function Testimonials() {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-6">
         {testimonials.map((item, i) => (
           <div key={i} className="bg-white rounded-2xl p-8 shadow-xl relative">
-            <span className="text-6xl text-purple-400 font-serif absolute -top-4">
+            <span className="text-6xl text-grey-10 font-serif absolute -top-4">
               “
             </span>
 
@@ -34,7 +34,7 @@ export default function Testimonials() {
 
             <div className="mt-6">
               <h4 className="font-bold text-slate-900">{item.name}</h4>
-              <p className="text-purple-500 font-medium">{item.role}</p>
+              <p className="text-blue-700 font-medium">{item.role}</p>
             </div>
           </div>
         ))}

@@ -38,7 +38,7 @@ export default function Experience() {
             >
               <div className="flex justify-between items-start mb-4">
                 <h3 className="text-xl font-semibold">{exp.title}</h3>
-                <span className="text-purple-600 font-medium text-sm">
+                <span className="text-blue-700 font-medium text-sm">
                   {exp.date}
                 </span>
               </div>
