@@ -1,5 +1,5 @@
 import React from "react";
-import TsionImage from "../assets/Tsion.png"
+import TsionImage from "../assets/Tsion.webp"
 export default function Hero() {
   return (
     <section className="relative w-full min-h-screen overflow-hidden bg-[#f7f9ff] flex items-center">
@@ -37,7 +37,10 @@ export default function Hero() {
 
           {/* Buttons */}
           <div className="flex gap-4 pt-4">
-            <a  href="#projects" className="bg-gradient-to-r from-[#1F2A45] to-[#2F5CFF] transition text-white font-medium px-6 py-3 rounded-lg shadow-md flex items-center gap-2">
+            <a
+              href="#projects"
+              className="bg-gradient-to-r from-[#1F2A45] to-[#2F5CFF] transition text-white font-medium px-6 py-3 rounded-lg shadow-md flex items-center gap-2"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -77,6 +80,7 @@ export default function Hero() {
           <div className="rounded-xl overflow-hidden shadow-[0_20px_40px_rgba(0,0,0,0.12)]">
             <img
               src={TsionImage}
+              loading="lazy"
               alt="Professional person"
               className="w-[420px] h-[320px] object-cover"
             />

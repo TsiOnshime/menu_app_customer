@@ -4,7 +4,7 @@ import { HiLocationMarker } from "react-icons/hi";
 import { FaGraduationCap, FaCoffee } from "react-icons/fa";
 import { PiAsteriskBold } from "react-icons/pi";
 import { LuLightbulb, LuTarget, LuUsers } from "react-icons/lu";
-import Avatar from "../assets/avatar.jpg";
+import Avatar from "../assets/avatar.webp";
 export default function AboutMe() {
   return (
     <section className="w-full bg-[#f7f9ff] py-20" id="about">
@@ -84,6 +84,7 @@ export default function AboutMe() {
             <img
               src={Avatar}
               alt="Profile"
+              loading="lazy"
               className="w-28 h-28 rounded-full mx-auto mb-4 object-cover"
             />
             <h4 className="text-xl font-semibold text-[#1F2A45]">
@@ -95,13 +96,15 @@ export default function AboutMe() {
             <div className="flex justify-center gap-4">
               <a
                 className="bg-[#2F5CFF] w-10 h-10 text-white rounded-full flex items-center justify-center hover:bg-[#1F2A45] transition"
-                href="https://www.linkedin.com/in/tsion-shimelis-44729a397/" target="_blank"
+                href="https://www.linkedin.com/in/tsion-shimelis-44729a397/"
+                target="_blank"
               >
                 <FaLinkedinIn size={18} />
               </a>
               <a
                 className="bg-[#2F5CFF] w-10 h-10 text-white rounded-full flex items-center justify-center hover:bg-[#1F2A45] transition"
-                href="https://github.com/TsiOnshime" target="_blank"
+                href="https://github.com/TsiOnshime"
+                target="_blank"
               >
                 <FaGithub size={18} />
               </a>

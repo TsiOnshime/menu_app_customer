@@ -1,9 +1,9 @@
 import React from "react";
-import Innovate from "../images/innovate.png";
-import Portfolio1 from "../images/portfolio1.png";
-import Fashion from "../images/fashion.png";
-import Codeflow from "../images/codeflow.png";
-import AiAnalytics from "../images/aiAnalytics.png";
+import Innovate from "../images/innovate.webp";
+import Portfolio1 from "../images/portfolio1.webp";
+import Fashion from "../images/fashion.webp";
+import Codeflow from "../images/codeflow.webp";
+import AiAnalytics from "../images/aiAnalytics.webp";
 const projects = [
   {
     title: "Innovate Corp",
@@ -63,6 +63,7 @@ export default function FeaturedProjects() {
             {/* Image */}
             <div className="w-full h-52 bg-gray-100 flex items-center justify-center overflow-hidden">
               <img
+                loading="lazy"
                 src={project.img}
                 alt={project.title}
                 className="w-full h-full object-cover"
