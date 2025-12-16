@@ -23,7 +23,7 @@ export default function Experience() {
   ];
 
   return (
-    <section className="w-full py-20">
+    <section className="w-full py-20" id="experience">
       <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-center text-4xl font-bold mb-14">Experience</h2>
 

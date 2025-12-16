@@ -45,7 +45,7 @@ const projects = [
 
 export default function FeaturedProjects() {
   return (
-    <section className="w-full py-16">
+    <section className="w-full py-16" id="projects">
       <h2 className="text-center text-4xl font-extrabold text-gray-900 mb-14">
         Featured Projects
       </h2>

@@ -5,26 +5,36 @@ export default function Navbar() {
         <h1 className="text-2xl font-bold text-[#233876]">Tsion</h1>
 
         <ul className="hidden md:flex gap-10 text-gray-600 text-lg">
-          <li className="hover:text-[#233876] cursor-pointer transition">
-            About
+          <li>
+            <a href="#about" className="hover:text-[#233876] transition block">
+              About
+            </a>
           </li>
-          <li className="hover:text-[#233876] cursor-pointer transition">
-            Skills
+          <li>
+            <a href="#skills" className="hover:text-[#233876] transition block">
+              Skills
+            </a>
           </li>
-          <li className="hover:text-[#233876] cursor-pointer transition">
-            Projects
+          <li>
+            <a href="#projects" className="hover:text-[#233876] transition block">
+              Projects
+            </a>
           </li>
-          <li className="hover:text-[#233876] cursor-pointer transition">
-            Experience
+          <li>
+            <a href="#experience" className="hover:text-[#233876] transition block">
+              Experience
+            </a>
           </li>
-          <li className="hover:text-[#233876] cursor-pointer transition">
-            Contact
+          <li>
+            <a href="#contact" className="hover:text-[#233876] transition block">
+              Contact
+            </a>
           </li>
         </ul>
 
-        <button className="px-6 py-2 rounded-xl bg-gradient-to-r from-[#1F2A45] to-[#2F5CFF] text-white font-semibold shadow-md">
+        <a href="#contact"className="px-6 py-2 rounded-xl bg-gradient-to-r from-[#1F2A45] to-[#2F5CFF] text-white font-semibold shadow-md">
           Hire Me
-        </button>
+        </a>
       </div>
     </nav>
   );

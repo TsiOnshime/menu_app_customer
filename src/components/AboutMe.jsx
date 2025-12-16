@@ -6,7 +6,7 @@ import { PiAsteriskBold } from "react-icons/pi";
 import { LuLightbulb, LuTarget, LuUsers } from "react-icons/lu";
 export default function AboutMe() {
   return (
-    <section className="w-full bg-[#f7f9ff] py-20">
+    <section className="w-full bg-[#f7f9ff] py-20" id="about">
       <div className="text-center mb-12">
         <h2 className="text-3xl font-bold text-[#1F2A45]">About Me</h2>
         <div className="w-20 h-1 bg-gradient-to-r from-[#1F2A45] to-[#2F5CFF] mx-auto mt-3 rounded-full"></div>

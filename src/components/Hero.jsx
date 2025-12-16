@@ -37,7 +37,7 @@ export default function Hero() {
 
           {/* Buttons */}
           <div className="flex gap-4 pt-4">
-            <button className="bg-gradient-to-r from-[#1F2A45] to-[#2F5CFF] transition text-white font-medium px-6 py-3 rounded-lg shadow-md flex items-center gap-2">
+            <a  href="#projects" className="bg-gradient-to-r from-[#1F2A45] to-[#2F5CFF] transition text-white font-medium px-6 py-3 rounded-lg shadow-md flex items-center gap-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -47,9 +47,13 @@ export default function Hero() {
                 <path d="M4 3a1 1 0 000 2h12a1 1 0 100-2H4zM4 7a1 1 0 000 2h12a1 1 0 100-2H4zM3 12a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM4 15a1 1 0 000 2h8a1 1 0 100-2H4z" />
               </svg>
               View My Work
-            </button>
+            </a>
 
-            <button className="border border-gray-300 hover:bg-gray-50 transition font-medium px-6 py-3 rounded-lg flex items-center gap-2 text-gray-700">
+            <a
+              href="/Tsion_Shimelis_Frontend_Developer_CV.pdf"
+              download
+              className="border border-gray-300 hover:bg-gray-50 transition font-medium px-6 py-3 rounded-lg flex items-center gap-2 text-gray-700"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -64,7 +68,7 @@ export default function Hero() {
                 />
               </svg>
               Download CV
-            </button>
+            </a>
           </div>
         </div>
 

@@ -46,7 +46,7 @@ export default function Contact() {
   };
 
   return (
-    <section className="py-28">
+    <section className="py-28" id="contact">
       <h2 className="text-4xl font-bold text-center text-slate-900 mb-16">
         Let&apos;s Work Together
       </h2>

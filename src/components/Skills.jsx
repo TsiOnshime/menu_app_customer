@@ -50,7 +50,7 @@ const SkillCard = ({ icon: Icon, title, percent, variant, iconColor }) => {
 
 export default function Skills() {
   return (
-    <section className="w-full py-20 bg-[#f8faff] flex flex-col items-center">
+    <section className="w-full py-20 bg-[#f8faff] flex flex-col items-center" id="skills">
       {/* Title */}
       <h2 className="text-4xl font-bold text-gray-900">
         Skills & Technologies
