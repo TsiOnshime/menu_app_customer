@@ -3,29 +3,37 @@ import { collection, getDocs } from "firebase/firestore";
 import { db } from "../firebase";
 
 const DrinksSection = ({ items }) => (
-  <div className="space-y-8">
-    <h2 className="text-3xl font-bold text-orange-500">🥤 Drinks</h2>
+  <div className="space-y-6">
+    <h2 className="text-2xl sm:text-3xl font-bold text-orange-500">
+      🥤 Drinks
+    </h2>
 
-    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6">
       {items.map((drink) => (
         <div
           key={drink.id}
-          className="bg-white rounded-xl shadow-sm hover:shadow-md transition p-5 flex items-center justify-between"
+          className="bg-white rounded-xl shadow-sm hover:shadow-md transition p-4 sm:p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4"
         >
           <div className="flex items-center gap-4">
-            <div className="w-50 h-50 flex items-center justify-center text-xl">
-              <img className="" src={drink.imageUrl} alt="" />
+            <div className="w-24 h-24 sm:w-20 sm:h-20 flex items-center justify-center">
+              <img
+                className="object-cover rounded-lg"
+                src={drink.imageUrl}
+                alt={drink.name}
+              />
             </div>
             <div>
-              <h3 className="font-semibold text-lg">{drink.name}</h3>
+              <h3 className="font-semibold text-lg sm:text-xl">{drink.name}</h3>
               {drink.description && (
-                <p className="text-sm text-gray-500">{drink.description}</p>
+                <p className="text-sm sm:text-base text-gray-500">
+                  {drink.description}
+                </p>
               )}
             </div>
           </div>
 
-          <span className="text-orange-500 font-bold text-lg">
-            {drink.price}Birr
+          <span className="text-orange-500 font-bold text-lg sm:text-xl">
+            {drink.price} Birr
           </span>
         </div>
       ))}
@@ -34,15 +42,15 @@ const DrinksSection = ({ items }) => (
 );
 
 const Section = ({ title, items }) => (
-  <div className="space-y-8">
-    <h2 className="text-3xl font-bold text-orange-500">{title}</h2>
+  <div className="space-y-6">
+    <h2 className="text-2xl sm:text-3xl font-bold text-orange-500">{title}</h2>
 
     {items.map((item) => (
       <div
         key={item.id}
-        className="bg-white rounded-xl shadow-md flex gap-6 overflow-hidden"
+        className="bg-white rounded-xl shadow-md flex flex-col sm:flex-row overflow-hidden"
       >
-        <div className="w-56 h-40 flex-shrink-0">
+        <div className="w-full h-48 sm:w-56 sm:h-40 flex-shrink-0">
           <img
             src={item.imageUrl}
             alt={item.name}
@@ -50,20 +58,23 @@ const Section = ({ title, items }) => (
           />
         </div>
 
-        <div className="flex-1 p-6 flex flex-col justify-between">
+        <div className="flex-1 p-4 sm:p-6 flex flex-col justify-between">
           <div>
-            <h3 className="text-2xl font-bold">{item.name}</h3>
-            <p className="text-gray-600 mt-2">{item.description}</p>
+            <h3 className="text-xl sm:text-2xl font-bold">{item.name}</h3>
+            <p className="text-gray-600 mt-2 text-sm sm:text-base">
+              {item.description}
+            </p>
           </div>
 
-          <span className="text-orange-500 text-xl font-bold mt-4">
-            {item.price}Birr
+          <span className="text-orange-500 text-lg sm:text-xl font-bold mt-4">
+            {item.price} Birr
           </span>
         </div>
       </div>
     ))}
   </div>
 );
+
 
 const Menu = () => {
   const [foods, setFoods] = useState([]);
